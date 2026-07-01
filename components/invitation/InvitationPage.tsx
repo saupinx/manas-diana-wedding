@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { assetPaths, eventDateIso, invitation, type Language, whatsappPhone } from "@/data/invitation";
+import { withBasePath } from "@/lib/basePath";
 import { getCountdown, padTime, type CountdownValue } from "@/lib/countdown";
 import { defaultLanguage, getStoredLanguage, storeLanguage } from "@/lib/language";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
@@ -20,6 +21,8 @@ export function InvitationPage() {
   const [language, setLanguage] = useState<Language>(defaultLanguage);
   const [countdown, setCountdown] = useState<CountdownValue | null>(null);
   const content = invitation[language];
+  const heroSrc = withBasePath(assetPaths.hero);
+  const musicSrc = withBasePath(assetPaths.music);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -75,8 +78,8 @@ export function InvitationPage() {
       <Hero
         content={content}
         language={language}
-        heroSrc={assetPaths.hero}
-        musicSrc={assetPaths.music}
+        heroSrc={heroSrc}
+        musicSrc={musicSrc}
         onLanguageChange={setLanguage}
       />
 

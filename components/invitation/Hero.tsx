@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import type { InvitationContent, Language } from "@/data/invitation";
+import { withBasePath } from "@/lib/basePath";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MusicButton } from "./MusicButton";
 import { PlaceholderImage } from "./PlaceholderImage";
@@ -78,8 +79,7 @@ export function Hero({
             <span
               className="hero-floral-transition-image"
               style={{
-                backgroundImage:
-                  "url(/assets/decor/flower-03-watercolor-vertical.png)",
+                backgroundImage: `url(${withBasePath("/assets/decor/flower-03-watercolor-vertical.png")})`,
               }}
             />
           </div>

@@ -1,8 +1,9 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { useState } from "react";
 import type { InvitationContent } from "@/data/invitation";
+import { withBasePath } from "@/lib/basePath";
 import { PlaceholderImage } from "./PlaceholderImage";
 
 type GallerySectionProps = {
@@ -34,7 +35,7 @@ function GalleryImage({ src, alt, tall }: { src: string; alt: string; tall: bool
       <PlaceholderImage label={alt} />
       {!failed ? (
         <Image
-          src={src}
+          src={withBasePath(src)}
           alt={alt}
           fill
           sizes="430px"
@@ -47,4 +48,3 @@ function GalleryImage({ src, alt, tall }: { src: string; alt: string; tall: bool
     </div>
   );
 }
-

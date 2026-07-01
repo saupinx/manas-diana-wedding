@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/basePath";
+
 const floralAssets = {
   corner: "/assets/decor/floral-corner.png",
   divider: "/assets/decor/floral-divider.png",
@@ -21,7 +23,7 @@ export function FloralDecor({ variant, className = "" }: FloralDecorProps) {
     <span
       aria-hidden="true"
       className={`floral-decor floral-decor-${variant} ${className}`}
-      style={{ backgroundImage: `url(${floralAssets[variant]})` }}
+      style={{ backgroundImage: `url(${withBasePath(floralAssets[variant])})` }}
     />
   );
 }
