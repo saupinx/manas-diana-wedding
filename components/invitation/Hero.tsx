@@ -40,7 +40,7 @@ export function Hero({
             priority
             sizes="430px"
             className={`object-cover transition-[opacity,transform] duration-700 ${
-              imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-[1.02]"
+              imageLoaded ? "scale-100 opacity-100" : "scale-[1.02] opacity-0"
             }`}
             onLoad={() => setImageLoaded(true)}
             onError={() => setImageFailed(true)}
@@ -51,7 +51,10 @@ export function Hero({
       <div className="relative z-10 flex min-h-[720px] flex-col px-6 pb-12 pt-8">
         <div className="hero-top-controls">
           <div className="hero-controls-stack">
-            <LanguageSwitcher language={language} onChange={onLanguageChange} />
+            <LanguageSwitcher
+              language={language}
+              onChange={onLanguageChange}
+            />
 
             <MusicButton
               src={musicSrc}
@@ -61,16 +64,19 @@ export function Hero({
           </div>
         </div>
 
-        <div className="hero-bottom-content mt-auto text-center">
-          <div className="hero-text-stack">
+        <div className="hero-bottom-content text-center">
+          <div className="wedding-title-stack">
             <p className="hero-event-title hero-event-title-alone">
               {content.eventTitle}
             </p>
 
-            <div className="hero-name-wrap relative mx-auto w-fit px-7">
+            <div className="hero-name-wrap relative mx-auto">
               <Sparkles variant="hero" />
-              <h1 className="hero-name-title font-calligraphy drop-shadow-[0_10px_18px_rgba(0,0,0,0.08)]">
-                {content.heroNames}
+
+              <h1 className="hero-couple-names font-calligraphy">
+                <span>Manas</span>
+                <span className="hero-couple-amp">&</span>
+                <span>Diana</span>
               </h1>
             </div>
           </div>
@@ -79,7 +85,9 @@ export function Hero({
             <span
               className="hero-floral-transition-image"
               style={{
-                backgroundImage: `url(${withBasePath("/assets/decor/flower-03-watercolor-vertical.png")})`,
+                backgroundImage: `url(${withBasePath(
+                  "/assets/decor/flower-03-watercolor-vertical.png",
+                )})`,
               }}
             />
           </div>
@@ -91,9 +99,11 @@ export function Hero({
               {content.organizers}
             </p>
 
-            <p className="hero-organizer-name font-calligraphy">
-              Anar
-            </p>
+            <div className="hero-organizer-names">
+              <span>Адильбек</span>
+              <span className="hero-organizer-amp">&</span>
+              <span>Гульжан</span>
+            </div>
           </div>
         </div>
       </div>

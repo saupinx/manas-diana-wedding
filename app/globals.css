@@ -2107,3 +2107,621 @@ body {
 .floral-details-border {
   pointer-events: none !important;
 }
+/* Wedding couple names */
+.hero-name-wrap {
+  width: 100% !important;
+  max-width: 410px !important;
+  padding: 0 !important;
+}
+
+.hero-couple-names {
+  position: relative !important;
+  z-index: 32 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+
+  width: 100% !important;
+  gap: 8px !important;
+  margin: 0 !important;
+
+  font-size: clamp(46px, 12vw, 58px) !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+
+  white-space: nowrap !important;
+  color: #000000 !important;
+
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.08));
+}
+
+.hero-couple-names > span {
+  display: inline-block;
+}
+
+.hero-couple-amp {
+  font-size: 0.55em !important;
+  line-height: 1 !important;
+  transform: translateY(2px);
+}
+
+/* Wedding organizers */
+.hero-organizer-block {
+  margin-top: 18px !important;
+  transform: none !important;
+}
+
+.hero-organizer-names {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+
+  width: 100% !important;
+  gap: 9px !important;
+  margin-top: 12px !important;
+
+  font-family: var(--font-invite-serif), Georgia, "Times New Roman", serif !important;
+  font-size: clamp(27px, 7.5vw, 34px) !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+
+  white-space: nowrap !important;
+  color: #000000 !important;
+}
+
+.hero-organizer-names > span {
+  display: inline-block;
+}
+
+.hero-organizer-amp {
+  font-size: 0.72em !important;
+  font-style: italic !important;
+}
+
+@media (max-width: 380px) {
+  .hero-couple-names {
+    gap: 6px !important;
+    font-size: clamp(39px, 11.5vw, 47px) !important;
+  }
+
+  .hero-organizer-names {
+    gap: 6px !important;
+    font-size: clamp(23px, 7vw, 28px) !important;
+  }
+}
+/* =========================================================
+   FINAL WEDDING HERO LAYOUT
+   ========================================================= */
+
+/* Hero должен быть достаточно высоким для имён хозяев */
+.reveal-section:first-child {
+  min-height: 900px !important;
+}
+
+.reveal-section:first-child > .relative.z-10 {
+  min-height: 900px !important;
+  padding-bottom: 34px !important;
+}
+
+/* Не прижимать текст к нижней части hero */
+.hero-bottom-content {
+  position: relative !important;
+  z-index: 20 !important;
+
+  margin-top: 12px !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+/* Заголовок и имена молодожёнов */
+.hero-text-stack {
+  position: relative !important;
+  z-index: 30 !important;
+
+  margin-top: 0 !important;
+  transform: none !important;
+}
+
+.hero-event-title-alone {
+  position: relative !important;
+  z-index: 31 !important;
+
+  margin: 0 0 22px !important;
+  transform: none !important;
+
+  font-size: 14px !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.32em !important;
+}
+
+.hero-name-wrap {
+  position: relative !important;
+  z-index: 32 !important;
+
+  width: 100% !important;
+  max-width: 390px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.hero-couple-names {
+  position: relative !important;
+  z-index: 33 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+
+  width: 100% !important;
+  margin: 0 !important;
+  gap: 10px !important;
+
+  font-size: clamp(46px, 12vw, 58px) !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+
+  white-space: nowrap !important;
+  color: #000000 !important;
+
+  transform: none !important;
+}
+
+.hero-couple-names > span {
+  display: inline-block !important;
+}
+
+.hero-couple-amp {
+  font-size: 0.55em !important;
+  line-height: 1 !important;
+  transform: translateY(2px) !important;
+}
+
+/* Цветы располагаются ниже имён, возле нижней части фотографии */
+.hero-floral-transition-fixed {
+  position: relative !important;
+  z-index: 15 !important;
+
+  width: calc(100% + 130px) !important;
+  height: 165px !important;
+
+  margin-top: 255px !important;
+  margin-right: -65px !important;
+  margin-bottom: 0 !important;
+  margin-left: -65px !important;
+
+  overflow: visible !important;
+  pointer-events: none !important;
+
+  transform: none !important;
+}
+
+.hero-floral-transition-image {
+  position: absolute !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 155% auto !important;
+
+  opacity: 0.92 !important;
+
+  transform: none !important;
+}
+
+/* Убираем старую чёрную линию между цветами и хозяевами */
+.hero-floral-transition-fixed + div {
+  display: none !important;
+}
+
+/* Хозяева торжества */
+.hero-organizer-block {
+  position: relative !important;
+  z-index: 30 !important;
+
+  width: 100% !important;
+
+  margin: 6px auto 0 !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+.hero-organizer-label {
+  margin: 0 !important;
+
+  font-family: var(--font-invite-serif), Georgia, "Times New Roman", serif !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+
+  text-transform: uppercase !important;
+  letter-spacing: 0.25em !important;
+  color: #111111 !important;
+}
+
+.hero-organizer-names {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+
+  width: 100% !important;
+
+  margin-top: 14px !important;
+  gap: 10px !important;
+
+  font-family: var(--font-invite-serif), Georgia, "Times New Roman", serif !important;
+  font-size: clamp(28px, 7.5vw, 35px) !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+
+  white-space: nowrap !important;
+  color: #000000 !important;
+
+  transform: none !important;
+}
+
+.hero-organizer-names > span {
+  display: inline-block !important;
+}
+
+.hero-organizer-amp {
+  font-size: 0.72em !important;
+  font-style: italic !important;
+}
+
+/* Телефоны уже 380px */
+@media (max-width: 380px) {
+  .reveal-section:first-child,
+  .reveal-section:first-child > .relative.z-10 {
+    min-height: 850px !important;
+  }
+
+  .hero-event-title-alone {
+    font-size: 12px !important;
+    letter-spacing: 0.26em !important;
+  }
+
+  .hero-couple-names {
+    gap: 6px !important;
+    font-size: clamp(39px, 11.5vw, 47px) !important;
+  }
+
+  .hero-floral-transition-fixed {
+    height: 150px !important;
+    margin-top: 245px !important;
+  }
+
+  .hero-organizer-names {
+    gap: 6px !important;
+    font-size: clamp(23px, 7vw, 29px) !important;
+  }
+}
+/* FINAL POSITION: wedding title and couple names lower */
+.hero-bottom-content {
+  margin-top: 0 !important;
+}
+
+.hero-text-stack {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 410px !important;
+
+  z-index: 40 !important;
+  padding: 0 18px !important;
+
+  transform: none !important;
+}
+
+.hero-event-title-alone {
+  margin: 0 0 18px !important;
+  transform: none !important;
+}
+
+.hero-name-wrap {
+  margin: 0 auto !important;
+  transform: none !important;
+}
+
+/* Move the flower strip slightly upward */
+.hero-floral-transition-fixed {
+  margin-top: 475px !important;
+  transform: translateY(-34px) !important;
+}
+
+/* Keep organizers directly below flowers */
+.hero-organizer-block {
+  margin-top: -22px !important;
+  transform: none !important;
+}
+
+@media (max-width: 380px) {
+  .hero-text-stack {
+    top: 400px !important;
+  }
+
+  .hero-floral-transition-fixed {
+    margin-top: 465px !important;
+    transform: translateY(-30px) !important;
+  }
+
+  .hero-organizer-block {
+    margin-top: -18px !important;
+  }
+}
+/* Абсолютное финальное положение заголовка свадьбы */
+.wedding-title-stack {
+  position: absolute !important;
+  top: 455px !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 50 !important;
+
+  width: 100% !important;
+  padding: 0 18px !important;
+  margin: 0 !important;
+
+  text-align: center !important;
+  transform: none !important;
+}
+
+.wedding-title-stack .hero-event-title-alone {
+  position: relative !important;
+
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+.wedding-title-stack .hero-name-wrap {
+  position: relative !important;
+
+  width: 100% !important;
+  max-width: 390px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+/* Цветочную полосу немного выше */
+.hero-floral-transition-fixed {
+  transform: translateY(-55px) !important;
+}
+
+/* Хозяева под цветочной полосой */
+.hero-organizer-block {
+  margin-top: -45px !important;
+  transform: none !important;
+}
+
+@media (max-width: 380px) {
+  .wedding-title-stack {
+    top: 445px !important;
+    padding: 0 12px !important;
+  }
+
+  .hero-floral-transition-fixed {
+    transform: translateY(-48px) !important;
+  }
+
+  .hero-organizer-block {
+    margin-top: -38px !important;
+  }
+}
+/* =========================================================
+   ABSOLUTE FINAL HERO POSITIONS
+   ========================================================= */
+
+/* Общий hero */
+.invite-shell > section:first-child {
+  position: relative !important;
+  min-height: 900px !important;
+}
+
+.invite-shell > section:first-child > .relative.z-10 {
+  position: relative !important;
+  min-height: 900px !important;
+}
+
+/* Старый контейнер больше не управляет расположением */
+.hero-bottom-content {
+  position: static !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+/* Свадебное торжество + Manas & Diana */
+.wedding-title-stack {
+  position: absolute !important;
+
+  top: 385px !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  z-index: 50 !important;
+
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 18px !important;
+
+  text-align: center !important;
+  transform: none !important;
+}
+
+.wedding-title-stack .hero-event-title-alone {
+  position: relative !important;
+
+  margin: 0 0 13px !important;
+  padding: 0 !important;
+
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.32em !important;
+
+  transform: none !important;
+}
+
+.wedding-title-stack .hero-name-wrap {
+  position: relative !important;
+
+  width: 100% !important;
+  max-width: 390px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+.wedding-title-stack .hero-couple-names {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+
+  width: 100% !important;
+  margin: 0 !important;
+  gap: 9px !important;
+
+  font-size: clamp(46px, 12vw, 58px) !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+
+  transform: none !important;
+}
+
+/* Цветы: располагаем независимо от текста */
+.hero-floral-transition-fixed {
+  position: absolute !important;
+
+  top: 445px !important;
+  left: 50% !important;
+
+  z-index: 20 !important;
+
+  width: calc(100% + 130px) !important;
+  height: 190px !important;
+
+  margin: 0 !important;
+
+  overflow: visible !important;
+  pointer-events: none !important;
+
+  transform: translateX(-50%) !important;
+}
+
+.hero-floral-transition-image {
+  position: absolute !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  background-repeat: no-repeat !important;
+  background-position: center top !important;
+  background-size: 155% auto !important;
+
+  opacity: 0.92 !important;
+
+  transform: none !important;
+}
+
+/* Убираем линию после цветов */
+.hero-floral-transition-fixed + div {
+  display: none !important;
+}
+
+/* Хозяева торжества */
+.hero-organizer-block {
+  position: absolute !important;
+
+  top: 705px !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  z-index: 40 !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 18px !important;
+
+  text-align: center !important;
+  transform: none !important;
+}
+
+.hero-organizer-label {
+  margin: 0 !important;
+
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.25em !important;
+}
+
+.hero-organizer-names {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+
+  width: 100% !important;
+
+  margin: 14px 0 0 !important;
+  gap: 10px !important;
+
+  font-size: clamp(28px, 7.5vw, 35px) !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+
+  transform: none !important;
+}
+
+@media (max-width: 380px) {
+  .invite-shell > section:first-child,
+  .invite-shell > section:first-child > .relative.z-10 {
+    min-height: 860px !important;
+  }
+
+  .wedding-title-stack {
+    top: 380px !important;
+    padding: 0 10px !important;
+  }
+
+  .wedding-title-stack .hero-event-title-alone {
+    font-size: 12px !important;
+    letter-spacing: 0.26em !important;
+  }
+
+  .wedding-title-stack .hero-couple-names {
+    gap: 6px !important;
+    font-size: clamp(39px, 11.5vw, 47px) !important;
+  }
+
+  .hero-floral-transition-fixed {
+    top: 490px !important;
+    height: 180px !important;
+  }
+
+  .hero-organizer-block {
+    top: 680px !important;
+  }
+
+  .hero-organizer-names {
+    gap: 6px !important;
+    font-size: clamp(23px, 7vw, 29px) !important;
+  }
+}

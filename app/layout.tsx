@@ -24,8 +24,8 @@ const sloopScript = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Диана | Қыз Ұзату",
-  description: "Қыз Ұзату Дианы invitation",
+  title: "Манас & Диана | Үйлену тойы",
+  description: "Свадебное приглашение Манаса и Дианы",
 };
 
 export default function RootLayout({

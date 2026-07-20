@@ -7,7 +7,6 @@ import { getCountdown, padTime, type CountdownValue } from "@/lib/countdown";
 import { defaultLanguage, getStoredLanguage, storeLanguage } from "@/lib/language";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { CalendarSection } from "./CalendarSection";
-import { ChildrenNote } from "./ChildrenNote";
 import { EventInfoCard } from "./EventInfoCard";
 import { FloralDecor } from "./FloralDecor";
 import { FloralDivider } from "./FloralDivider";
@@ -58,12 +57,13 @@ export function InvitationPage() {
     [content.date, content.name, content.venue, language],
   );
 
-  const calendarUrl = useMemo(() => {
-    const title = encodeURIComponent(content.eventTitle);
-    const details = encodeURIComponent(content.invitationText);
-    const location = encodeURIComponent(content.address);
-    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20260805T130000Z/20260805T180000Z&details=${details}&location=${location}`;
-  }, [content.address, content.eventTitle, content.invitationText]);
+ const calendarUrl = useMemo(() => {
+  const title = encodeURIComponent(content.eventTitle);
+  const details = encodeURIComponent(content.invitationText);
+  const location = encodeURIComponent(content.address);
+
+  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20260810T130000Z/20260810T180000Z&details=${details}&location=${location}`;
+}, [content.address, content.eventTitle, content.invitationText]);
 
   const countdownItems = [
     [content.labels.days, countdown?.days],
@@ -115,7 +115,6 @@ export function InvitationPage() {
       <CalendarSection content={content} calendarUrl={calendarUrl} />
       <ProgramSection content={content} />
       <RsvpSection content={content} whatsappUrl={whatsappUrl} />
-      <ChildrenNote content={content} />
       <WishesSection content={content} />
     </main>
   );
