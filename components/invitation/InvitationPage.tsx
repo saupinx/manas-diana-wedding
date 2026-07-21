@@ -83,7 +83,7 @@ export function InvitationPage() {
         onLanguageChange={setLanguage}
       />
 
-      <InvitationText content={content} />
+     <InvitationText content={content} />
       <EventInfoCard content={content} />
 
      <section className="countdown-section reveal-section relative overflow-hidden px-5 py-9 text-center">

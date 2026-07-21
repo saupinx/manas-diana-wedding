@@ -139,9 +139,14 @@ a {
 }
 
 .premium-button {
-  background: #000000;
-  color: #ffffff;
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  transition: 0.25s;
+}
+
+.premium-button:hover {
+  background: #20ba5a;
 }
 
 .premium-button::before {
@@ -2724,4 +2729,16 @@ body {
     gap: 6px !important;
     font-size: clamp(23px, 7vw, 29px) !important;
   }
+}
+/* Уменьшаем пустое пространство после хозяев торжества */
+.hero-organizer-block {
+  margin-bottom: 0 !important;
+}
+
+.hero-bottom-content {
+  padding-bottom: 0 !important;
+}
+
+.hero-organizer-names {
+  margin-bottom: 0 !important;
 }

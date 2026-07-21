@@ -28,7 +28,7 @@ export function Hero({
   const [imageFailed, setImageFailed] = useState(false);
 
   return (
-    <section className="reveal-section relative min-h-[720px] overflow-hidden bg-white">
+    <section className="reveal-section relative min-h-[620px] overflow-hidden bg-white">
       <div className="hero-media absolute inset-x-0 top-0 h-[500px] overflow-hidden rounded-b-[38px] border-b border-neutral-200">
         <PlaceholderImage label={content.heroNames} />
 
@@ -48,7 +48,7 @@ export function Hero({
         ) : null}
       </div>
 
-      <div className="relative z-10 flex min-h-[720px] flex-col px-6 pb-12 pt-8">
+      <div className="relative z-10 flex min-h-[720px] flex-col px-6 pb-5 pt-8">
         <div className="hero-top-controls">
           <div className="hero-controls-stack">
             <LanguageSwitcher

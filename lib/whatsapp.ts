@@ -6,11 +6,15 @@
   language: "ru" | "kz";
 };
 
-export function buildWhatsAppUrl({ phone, name, date, venue, language }: WhatsAppOptions) {
+export function buildWhatsAppUrl({
+  phone,
+  date,
+  language,
+}: WhatsAppOptions) {
   const text =
     language === "kz"
-      ? `Сәлеметсіз бе! ${name} қыз ұзатуына ${date} күні, ${venue} мекенжайына қатысатынымды растаймын.`
-      : `Здравствуйте! Подтверждаю участие на Қыз Ұзату ${name} ${date} в ${venue}.`;
+      ? `Манас пен Диананың тойына ${date} күні қатысатынымды растаймын.`
+      : `Подтверждаю участие на торжестве Манаса и Дианы ${date}.`;
 
   const cleanPhone = phone?.replace(/[^\d]/g, "") ?? "";
   const base = cleanPhone ? `https://wa.me/${cleanPhone}` : "https://wa.me/";

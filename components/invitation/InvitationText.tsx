@@ -4,7 +4,7 @@ import { FloralDivider } from "./FloralDivider";
 
 export function InvitationText({ content }: { content: InvitationContent }) {
   return (
-    <section className="reveal-section relative overflow-hidden px-5 py-12 text-center">
+    <section className="invitation-section reveal-section relative -mt-24 overflow-hidden px-5 py-12 text-center">
       <FloralDecor variant="peony" className="floral-invitation-peony" />
       <div className="relative z-10">
         <p className="text-xs font-semibold uppercase tracking-[0.34em] text-neutral-600">
